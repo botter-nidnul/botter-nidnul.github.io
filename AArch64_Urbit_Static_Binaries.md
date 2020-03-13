@@ -1,6 +1,6 @@
 Available from [my Urbit github fork](https://github.com/botter-nidnul/urbit/releases/tag/urbit-v0.10.4-aarch64).
 
-If you use these on Raspbian you will still have to follow *Step One: Kernel* from [Steps to Urbit on Raspberry Pi](https://gist.github.com/botter-nidnul/e7f96cb53908c80a5c9c1fbee6ea74c5) but the rest of that guide can be ignored.
+If you use these on Raspbian you will still have to follow *Step One: Kernel* from [Steps to Urbit on Raspberry Pi](Steps_to_Urbit_on_Raspberry_Pi.md) but the rest of that guide can be ignored.
 
 ```
 curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v0.10.4-aarch64/urbit-v0.10.4-linux-arm64.tgz
