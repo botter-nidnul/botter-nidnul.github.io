@@ -1,3 +1,5 @@
+# Steps to Urbit on Raspberry Pi
+
 You need a Raspberry Pi capable of running in AArch64 (aka 64-bit) mode, which means a RPi 3 or 4 (maybe a later model RPi 2 with the upgraded BCM2837 chip).
 
 This guide assumes you're running the latest ([Buster](https://www.raspberrypi.org/blog/buster-the-new-version-of-raspbian/)) version of the default Raspberry Pi distro, Raspbian, and that you've run `sudo apt update` and `sudo apt upgrade` recently.
