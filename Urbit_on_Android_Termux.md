@@ -33,7 +33,7 @@ and if you're going to use PRoot:
 
 ### Step Four: Get Binaries
 
-Follow the `curl` and `tar` commands from the [AArch64 Static Binaries post](https://gist.github.com/botter-nidnul/465499df5e1da79454ec2f1dd6ec766f).
+Follow the `curl` and `tar` commands from the [AArch64 Static Binaries post](AArch64_Urbit_Static_Binaries.md).
 
 If you're not going to use PRoot, modify the commands from the above link to use [this Termux release binary](https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.4/urbit-v0.10.4-termux-arm64.tgz)
 
