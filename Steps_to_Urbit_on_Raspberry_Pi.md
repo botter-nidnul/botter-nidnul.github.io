@@ -14,7 +14,7 @@ Now reboot and your Pi will be running a 64-bit kernel.
 
 ### Alternate Step Two: Download Static Binaries
 
-It's now possible to download already compiled static binaries for AArch64. See [this post](https://gist.github.com/botter-nidnul/465499df5e1da79454ec2f1dd6ec766f) for further details. If you take this route, the following steps are unnecessary.
+It's now possible to download already compiled static binaries for AArch64. See [this post](AArch64_Urbit_Static_Binaries.md) for further details. If you take this route, the following steps are unnecessary.
 
 ### Step Two: Nix
 
