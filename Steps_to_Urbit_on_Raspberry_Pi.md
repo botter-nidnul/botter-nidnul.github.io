@@ -28,7 +28,7 @@ Then restart your shell session or run `. /home/pi/.nix-profile/etc/profile.d/ni
 
 `sudo apt-get install git-lfs`
 
-`git clone https://github.com/urbit/urbit --branch v0.10.3`
+`git clone https://github.com/urbit/urbit --branch urbit-v0.10.4`
 
 `cd urbit`
 
