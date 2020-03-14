@@ -43,4 +43,4 @@ If you're not using PRoot, you can then start Urbit just like you would in norma
 
 This command will mount the Termux prefix directory as the root of the filesystem, which will allow /tmp and /etc/resolv.conf to be found. The Termux home directory will be mounted inside this environment, sharing the home directory between the fake rootfs and the real one.
 
-`proot -r $PREFIX -b $HOME:/home -w /home /home/urbit-linux-arm64-91ccfb86a89f6bbe46774e3762bbfa61482769bf/urbit -F zod`
+`proot -r $PREFIX -b $HOME:/home -w /home /home/ce095f1d381cdd12af4f09e5d7ab0c64c352ddf3-linux-arm64/urbit -F zod`
