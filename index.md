@@ -5,3 +5,5 @@
 ## [AArch64 Urbit Static Binaries](AArch64_Urbit_Static_Binaries.md)
 
 ## [Urbit on Android (Termux)](Urbit_on_Android_Termux.md)
+
+This is a mirror of the urbit notebook `~botter-nidnul/urbit-pi`
