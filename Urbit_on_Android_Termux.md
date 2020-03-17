@@ -1,5 +1,7 @@
 ### A guide to (hopefully) getting Urbit running on your Android device.
 
+This guide is outdated: you're almost certainly going to need a modified kernel or custom rom (or at least be rooted, and run the urbit binaries as root😬) if you're running Android 8 or above because of the seccomp "security feature".
+
 There are two ways to do this: Inside of PRoot and outside of PRoot.
 
 PRoot causes Urbit to run slowly; fast enough (on my device, YMMV) for a fake zod to have a responsive dojo (after an almost hour long first boot), but a comet or moon is almost unusable. The advantage to this approach is that you don't need a rooted device, and you can use the standard AArch64 Urbit binary.
