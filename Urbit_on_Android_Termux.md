@@ -1,6 +1,6 @@
 ### A guide to (hopefully) getting Urbit running on your Android device.
 
-This guide is outdated: you're almost certainly going to need a modified kernel or custom rom (or at least be rooted, and run the urbit binaries as root😬) if you're running Android 8 or above because of the seccomp "security feature".
+**This guide is outdated:** you're almost certainly going to need a modified kernel or custom rom (or at least be rooted, and run the urbit binaries as root😬) if you're running Android 8 or above because of the seccomp "security feature".
 
 There are two ways to do this: Inside of PRoot and outside of PRoot.
 
