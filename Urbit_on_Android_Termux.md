@@ -1,16 +1,18 @@
 ### A guide to (hopefully) getting Urbit running on your Android device.
 
-**This guide is outdated:** you're almost certainly going to need a modified kernel or custom rom (or at least be rooted, and run the urbit binaries as root😬) if you're running Android 8 or above because of the seccomp "security feature".
+There are two ways to run Urbit on Android: Inside of PRoot and outside of PRoot.
 
-There are two ways to do this: Inside of PRoot and outside of PRoot.
+The PRoot method will (with a little luck) allow you to run Urbit on a stock Android device, although at a slight speed penalty.
 
-PRoot causes Urbit to run slowly; fast enough (on my device, YMMV) for a fake zod to have a responsive dojo (after an almost hour long first boot), but a comet or moon is almost unusable. The advantage to this approach is that you don't need a rooted device, and you can use the standard AArch64 Urbit binary.
+If you're running a custom kernel or custom ROM on your device it's likely [seccomp](https://en.wikipedia.org/wiki/Seccomp) has been disabled and you can run Urbit outside of PRoot. (To check the status of seccomp run `grep Seccomp /proc/self/status` in Termux. If seccomp is disabled this command will return either 0 or a blank line)
 
-Not using PRoot speeds up Urbit substantially, sufficiently to run a moon without the ames or behn spinner running almost constantly. This requires a [patched version of urbit](https://github.com/botter-nidnul/urbit/releases/tag/termux-v0.10.4) that knows where to find the tmp directory and resolv.conf file inside the normal Termux environment; it also requires your Android device to be rooted to circumvent the seccomp security feature which prevents static binaries from running.
+(It's also possible to get around seccomp on a rooted device running a stock kernel by launching Urbit as root. It's probably best not to do this, except *maybe* for a fake ~zod development ship. If you want to know how to run commands as root inside Termux you can look it up yourself.)
 
-The Android device will need to have at least a linux kernel version of 3.17 because of [libent](https://github.com/urbit/libent). There might be other problems with the kernel your device comes with. For example, I was only able to get this to work on my OnePlus 3T after upgrading to [this custom kernel](https://forum.xda-developers.com/oneplus-3/oneplus-3--3t-cross-device-development/r1b1-arter97-kernel-oneplus-3-3t-t4054539) which makes a number of alterations to the stock 3.18 kernel. I have no idea which of those changes was necessary to get this working. 
+In my experience not using PRoot speeds up Urbit by about 7%, but with the poor single threaded performance of ARM chips you may find that actually makes a difference to your Urbit experience.
 
-It'd be helpful if you give feedback on where it does or doesn't work, either in a comment here or in the chat ~botter-nidnul/extreme-urbiting
+Both sets of these Termux Urbit binaries have been modified to run better on Android by altering the [LMDB build flags](https://github.com/botter-nidnul/urbit/commit/58ab2fbef177d8de9da10f8f8e407c6e3bc45295). The non-PRoot binaries have been further altered to know [where to find the tmp directory and resolv.conf file](https://github.com/botter-nidnul/urbit/commit/8ff6bc672d3975bb9ab1b1c2ec785d8273f81b75) inside the normal Termux environment.
+
+Your Android device will need to have at least a linux kernel version of 3.17 because of [libent](https://github.com/urbit/libent). Android versions earlier than 8 (Oreo) do not have seccomp but may not have a kernel version high enough to run Urbit.
 
 ### Step One: Install Termux
 
@@ -21,7 +23,9 @@ From the [Play Store](https://play.google.com/store/apps/details?id=com.termux) 
 
 Start up Termux, then access the notification panel from the top of your screen, and click Termux's notification - you'll want to acquire wakelock to keep your Urbit running.
 
-You'll also want to disable battery optimization (or whatever your particular version of Android calls it) for Termux which will be deeply buried somewhere in the settings app. (this is supposed to happen automatically the first time you tell termux to acquire wakelock, but it didn't seem to work for me)
+You'll also want to make sure battery optimization (or whatever your particular version of Android calls it) has been turned off for Termux. This is supposed to happen automatically the first time you tell Termux to acquire wakelock, but it didn't seem to happen for me. This option will be deeply buried somewhere in the settings app.
+
+Your particular ROM may have an aggressive process killer that will murder Termux if it runs too intensively for too long. I've personally suffered from OnePlus's BgDetect, which I prevent from doing its dirty work by opening the recent apps switcher, clicking on the three dots in the upper right hand corner of the Termux screenshot and clicking "🔒Lock".
 
 ### Step Three: Install Pkgs
 
@@ -35,14 +39,37 @@ and if you're going to use PRoot:
 
 ### Step Four: Get Binaries
 
-Follow the `curl` and `tar` commands from the [AArch64 Static Binaries post](AArch64_Urbit_Static_Binaries.md).
+If you're going to use PRoot:
 
-If you're not going to use PRoot, modify the commands from the above link to use [this Termux release binary](https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.4/urbit-v0.10.4-termux-arm64.tgz)
+```
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-proot-v0.10.4/termux-proot-linux-v0.10.4-arm64.tgz
+tar xzf termux-proot-linux-v0.10.4-arm64.tgz
+```
 
-If you're not using PRoot, you can then start Urbit just like you would in normal linux.
+If you're **not** going to use PRoot:
 
-### Step Five: Run Urbit in PRoot
+```
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.4/termux-linux-v0.10.4-arm64.tgz
+tar xzf termux-linux-v0.10.4-arm64.tgz
+```
 
-This command will mount the Termux prefix directory as the root of the filesystem, which will allow /tmp and /etc/resolv.conf to be found. The Termux home directory will be mounted inside this environment, sharing the home directory between the fake rootfs and the real one.
+### Step Five: Run Urbit
 
-`proot -r $PREFIX -b $HOME:/home -w /home /home/ce095f1d381cdd12af4f09e5d7ab0c64c352ddf3-linux-arm64/urbit -F zod`
+If you're **not** using PRoot, you can start Urbit just like you would in normal linux:
+
+```
+cd 58ab2fbef177d8de9da10f8f8e407c6e3bc45295-linux-arm64
+./urbit
+```
+
+If you're using PRoot you need to run one extra command, `termux-chroot`, to switch into a PRoot'ed environment:
+
+```
+termux-chroot
+cd c590fcce687be62604bb579096b0237e6e1f87e9-linux-arm64
+./urbit
+```
+
+### Step Six: Feedback
+
+It'd be helpful if you give feedback on where this does or doesn't work, either in a comment here or in the chat ~/~botter-nidnul/extreme-urbiting
