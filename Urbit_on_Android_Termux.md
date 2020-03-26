@@ -1,3 +1,5 @@
+↰ [Return to Index](index.md)
+
 ### A guide to (hopefully) getting Urbit running on your Android device.
 
 There are two ways to run Urbit on Android: Inside of PRoot and outside of PRoot.
@@ -73,3 +75,5 @@ cd c590fcce687be62604bb579096b0237e6e1f87e9-linux-arm64
 ### Step Six: Feedback
 
 It'd be helpful if you give feedback on where this does or doesn't work, either in a comment here or in the chat ~/~botter-nidnul/extreme-urbiting
+
+↰ [Return to Index](index.md)
