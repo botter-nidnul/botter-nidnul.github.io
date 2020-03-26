@@ -1,3 +1,5 @@
+↰ [Return to Index](index.md)
+
 ### What to look for in a Single-board Computer for running Urbit
 
 Thinking about buying a Raspberry Pi 4 just to run Urbit on it? I suggest you **don't** - you can **_do better than a Raspberry Pi!_** They're the most popular brand, and have the widest number of compatible accessories, but CPU and storage are both slower on the Raspberry Pi than on alternatives with the same or slightly higher price.
@@ -11,3 +13,5 @@ Also be on the lookout for eMMC module or m.2 NVMe support. The RPi4 is primaril
 A good place to start looking for RPi alternatives is [HackerBoards](https://www.hackerboards.com/search.php?type=&q=&price_min=&price_max=&cpu_speed_min=1800&cpu_cores=&cpu_64bit=on&cpu_arch=arm&ram_min=&storage_min=&lan_speed=0&usb_min=&gpio_min=&dim_max_1=&dim_max_2=&weight=&order=price&order_d=a). Note that they don't list all variants of every board. So if you see a board you like that [only has 2gb of RAM listed](https://www.hackerboards.com/product/353/) look at the manufacturer's website and see if [there is a variant with 4gb](https://www.khadas.com/vim3).
 
 If I were to recommend a particular Pi alternative (which I'm not, because I haven't tried *_any_* of them) it would probably be the newest SBC from  [Pine64](https://www.pine64.org/). They will soon be releasing the [HardROCK64](https://www.hackerboards.com/product/410/) which should be the same price as the RPi4 and all around more performant, with socket for [eMMC modules](https://store.pine64.org/?product=32gb-emmc).
+
+↰ [Return to Index](index.md)
