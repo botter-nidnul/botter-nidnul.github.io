@@ -6,4 +6,6 @@
 
 ## [Urbit on Android (Termux)](Urbit_on_Android_Termux.md)
 
+## [Buying Guide to Pi Alternatives](Buying_Guide.md)
+
 This is a mirror of the urbit notebook `~botter-nidnul/urbit-pi`
