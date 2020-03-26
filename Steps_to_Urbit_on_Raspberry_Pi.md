@@ -1,3 +1,5 @@
+<----- [Return to Index](index.md)
+
 # Steps to Urbit on Raspberry Pi
 
 You need a Raspberry Pi capable of running in AArch64 (aka 64-bit) mode, which means a RPi 3 or 4 (maybe a later model RPi 2 with the upgraded BCM2837 chip).
@@ -61,3 +63,5 @@ If your Pi doesn't have enough ram to run urbit, [create a swap file](https://ur
 ### The Chat
 
 Join the chat ~/~botter-nidnul/extreme-urbiting if you have questions or issues.
+
+<----- [Return to Index](index.md)
