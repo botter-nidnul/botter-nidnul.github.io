@@ -60,4 +60,4 @@ If your Pi doesn't have enough ram to run urbit, [create a swap file](https://ur
 
 ### The Chat
 
-Join the chat ~botter-nidnul/extreme-urbiting if you have questions or issues.
+Join the chat ~/~botter-nidnul/extreme-urbiting if you have questions or issues.
