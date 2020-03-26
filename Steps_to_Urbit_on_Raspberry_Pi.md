@@ -1,4 +1,4 @@
-<----- [Return to Index](index.md)
+↰ [Return to Index](index.md)
 
 # Steps to Urbit on Raspberry Pi
 
@@ -64,4 +64,4 @@ If your Pi doesn't have enough ram to run urbit, [create a swap file](https://ur
 
 Join the chat ~/~botter-nidnul/extreme-urbiting if you have questions or issues.
 
-<----- [Return to Index](index.md)
+↰ [Return to Index](index.md)
