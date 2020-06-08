@@ -18,7 +18,7 @@ Your Android device will need to have at least a linux kernel version of 3.17 be
 
 ### Step One: Install Termux
 
-From the [Play Store](https://play.google.com/store/apps/details?id=com.termux) or 
+From the [Play Store](https://play.google.com/store/apps/details?id=com.termux) or
 [F-Droid](https://f-droid.org/repository/browse/?fdid=com.termux)
 
 ### Step Two: Disable Powersaving
@@ -44,15 +44,15 @@ and if you're going to use PRoot:
 If you're going to use PRoot:
 
 ```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-proot-v0.10.4/termux-proot-linux-v0.10.4-arm64.tgz
-tar xzf termux-proot-linux-v0.10.4-arm64.tgz
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-proot-v0.10.5/termux-proot-urbit-v0.10.5-linux-arm64.tgz
+tar xzf termux-proot-urbit-v0.10.5-linux-arm64.tgz
 ```
 
 If you're **not** going to use PRoot:
 
 ```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.4/termux-linux-v0.10.4-arm64.tgz
-tar xzf termux-linux-v0.10.4-arm64.tgz
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.5/termux-urbit-v0.10.5-linux-arm64.tgz
+tar xzf termux-urbit-v0.10.5-linux-arm64.tgz
 ```
 
 ### Step Five: Run Urbit
@@ -60,7 +60,7 @@ tar xzf termux-linux-v0.10.4-arm64.tgz
 If you're **not** using PRoot, you can start Urbit just like you would in normal linux:
 
 ```
-cd 58ab2fbef177d8de9da10f8f8e407c6e3bc45295-linux-arm64
+cd 507fd2787fa99658d418dc33a310a2220ce4e980-linux-arm64
 ./urbit
 ```
 
@@ -68,7 +68,7 @@ If you're using PRoot you need to run one extra command, `termux-chroot`, to swi
 
 ```
 termux-chroot
-cd c590fcce687be62604bb579096b0237e6e1f87e9-linux-arm64
+cd 9a65749d402c087f7fb05e42ddf0607f97bafc37-linux-arm64
 ./urbit
 ```
 
