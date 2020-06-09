@@ -58,7 +58,7 @@ Run urbit with `urbit some-planet` (note there's no `./` in front of the urbit c
 
 You may get occasional [memory mapping errors on boot](https://github.com/urbit/urbit/issues/2067). These errors are intermittent, just try running urbit again.
 
-If your Pi doesn't have enough ram to run urbit, [create a swap file](https://urbit.org/using/install/#about-swap-space).
+If your Pi doesn't have enough ram to run urbit, [create a swap file](https://raspberrypi.stackexchange.com/a/1605).
 
 ### The Chat
 
