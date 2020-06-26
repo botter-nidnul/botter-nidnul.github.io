@@ -44,15 +44,15 @@ and if you're going to use PRoot:
 If you're going to use PRoot:
 
 ```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-proot-v0.10.5/termux-proot-urbit-v0.10.5-linux-arm64.tgz
-tar xzf termux-proot-urbit-v0.10.5-linux-arm64.tgz
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-proot-v0.10.7/termux-proot-urbit-v0.10.7-linux-arm64.tgz
+tar xzf termux-proot-urbit-v0.10.7-linux-arm64.tgz
 ```
 
 If you're **not** going to use PRoot:
 
 ```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.5/termux-urbit-v0.10.5-linux-arm64.tgz
-tar xzf termux-urbit-v0.10.5-linux-arm64.tgz
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.7/termux-urbit-v0.10.7-linux-arm64.tgz
+tar xzf termux-urbit-v0.10.7-linux-arm64.tgz
 ```
 
 ### Step Five: Run Urbit
@@ -60,7 +60,7 @@ tar xzf termux-urbit-v0.10.5-linux-arm64.tgz
 If you're **not** using PRoot, you can start Urbit just like you would in normal linux:
 
 ```
-cd 507fd2787fa99658d418dc33a310a2220ce4e980-linux-arm64
+cd 01151dbaf73da0d8281f8bda27690adee10829bf-linux-arm64
 ./urbit
 ```
 
@@ -68,7 +68,7 @@ If you're using PRoot you need to run one extra command, `termux-chroot`, to swi
 
 ```
 termux-chroot
-cd 9a65749d402c087f7fb05e42ddf0607f97bafc37-linux-arm64
+cd 59a2aa0f71032028bb2fd9b4cdcac863655f1fab-linux-arm64
 ./urbit
 ```
 
