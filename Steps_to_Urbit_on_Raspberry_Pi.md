@@ -24,7 +24,7 @@ It's now possible to download already compiled static binaries for AArch64. See 
 
 `sudo mkdir /nix && sudo chown pi.pi /nix`
 
-`curl https://nixos.org/nix/install | sh`
+`curl -L https://nixos.org/nix/install | sh`
 
 Then restart your shell session or run `. /home/pi/.nix-profile/etc/profile.d/nix.sh` so your environment variables are set for nix.
 
