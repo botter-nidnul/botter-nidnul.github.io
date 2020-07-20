@@ -9,7 +9,7 @@ If you use these on Raspbian you will still have to follow *Step One: Kernel* fr
 ```
 curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v0.10.7-aarch64/urbit-v0.10.7-linux-arm64.tgz
 tar xzf urbit-v0.10.7-linux-arm64.tgz
-cd c15f11a591b46309e11b328e71879868d0ba6525-linux-arm64
+cd 50a4d4e00302c0d51a00dfadb72cd52807bcae1b-linux-arm64
 ./urbit
 ```
 
