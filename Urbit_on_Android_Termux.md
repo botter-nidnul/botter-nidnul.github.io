@@ -60,7 +60,7 @@ tar xzf termux-urbit-v0.10.7-linux-arm64.tgz
 If you're **not** using PRoot, you can start Urbit just like you would in normal linux:
 
 ```
-cd 01151dbaf73da0d8281f8bda27690adee10829bf-linux-arm64
+cd 17b5583c1e8e7e5c4bababa04c3a3d4bdd8127bb-linux-arm64
 ./urbit
 ```
 
@@ -68,7 +68,7 @@ If you're using PRoot you need to run one extra command, `termux-chroot`, to swi
 
 ```
 termux-chroot
-cd 59a2aa0f71032028bb2fd9b4cdcac863655f1fab-linux-arm64
+cd 19d5355786f48fc9899ac97d3319a5850ef9e5f8-linux-arm64
 ./urbit
 ```
 
