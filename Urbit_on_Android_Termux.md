@@ -74,6 +74,6 @@ cd 19d5355786f48fc9899ac97d3319a5850ef9e5f8-linux-arm64
 
 ### Step Six: Feedback
 
-It'd be helpful if you give feedback on where this does or doesn't work, either in a comment here or in the chat ~/~botter-nidnul/extreme-urbiting
+It'd be helpful if you give feedback on where this does or doesn't work in the group on Urbit `~botter-nidnul/urbit-on-arm`
 
 ↰ [Return to Index](index.md)
