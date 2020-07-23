@@ -8,4 +8,4 @@
 
 ## [Buying Guide to Pi Alternatives](Buying_Guide.md)
 
-This is a mirror of the urbit notebook `~botter-nidnul/urbit-pi`
+A mirror of this notebook is available on Urbit inside the group `~botter-nidnul/urbit-on-arm`
