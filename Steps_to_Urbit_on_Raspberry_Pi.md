@@ -60,8 +60,8 @@ You may get occasional [memory mapping errors on boot](https://github.com/urbit/
 
 If your Pi doesn't have enough ram to run urbit, [create a swap file](https://raspberrypi.stackexchange.com/a/1605).
 
-### The Chat
+### The Group
 
-Join the chat ~/~botter-nidnul/extreme-urbiting if you have questions or issues.
+Join the group `~botter-nidnul/urbit-on-arm` if you have questions or issues.
 
 ↰ [Return to Index](index.md)
