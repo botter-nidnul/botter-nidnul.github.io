@@ -32,7 +32,7 @@ Then restart your shell session or run `. /home/pi/.nix-profile/etc/profile.d/ni
 
 `sudo apt-get install git-lfs`
 
-`git clone https://github.com/urbit/urbit --branch urbit-v0.10.7`
+`git clone https://github.com/botter-nidnul/urbit --branch urbit-v0.10.8-aarch64`
 
 `cd urbit`
 
@@ -55,8 +55,6 @@ You no longer need the urbit directory git cloned, and I suggest you remove it t
 ### Step Six: Boot Your Planet
 
 Run urbit with `urbit some-planet` (note there's no `./` in front of the urbit command like when you use downloaded release binaries)
-
-You may get occasional [memory mapping errors on boot](https://github.com/urbit/urbit/issues/2067). These errors are intermittent, just try running urbit again.
 
 If your Pi doesn't have enough ram to run urbit, [create a swap file](https://raspberrypi.stackexchange.com/a/1605).
 
