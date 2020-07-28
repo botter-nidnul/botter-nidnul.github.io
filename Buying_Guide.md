@@ -12,6 +12,6 @@ Also be on the lookout for eMMC module or m.2 NVMe support. The RPi4 is primaril
 
 A good place to start looking for RPi alternatives is [HackerBoards](https://hackerboards.com/).
 
-If I were to recommend a particular Pi alternative (which I'm not, because I haven't tried *_any_* of them) it would probably be the newest SBC from  [Pine64](https://www.pine64.org/). They will soon be releasing the [HardROCK64](https://www.hackerboards.com/product/410/) which should be the same price as the RPi4 and all around more performant, with socket for [eMMC modules](https://store.pine64.org/?product=32gb-emmc).
+If I were to recommend a particular Pi alternative (which I'm not, because I haven't tried *_any_* of them) it would probably be the newest SBC from  [Pine64](https://www.pine64.org/). They will soon be releasing the [HardROCK64](https://hackerboards.com/boards/hardrock64/) which should be the same price as the RPi4 and all around more performant, with socket for [eMMC modules](https://store.pine64.org/?product=32gb-emmc).
 
 ↰ [Return to Index](index.md)
