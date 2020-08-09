@@ -28,9 +28,11 @@ Now let's navigate to the sumbdomain that was just setup, to make sure it worked
 
 ![Not Secure](assets/not_secure.jpg)
 
-It works, but we need to get https working.
+It works, but we need to get https working. Let's run some commands in dojo.
 
-In dojo run `:acme &path /topleveldomain/domain/subdomain`
+First, make sure Urbit's acme app is running with `|start %acme`
+
+Next run `:acme &path /topleveldomain/domain/subdomain`
 
 ![:acme &path /com/raspberryip/botter-nidnul](assets/acme_path.jpg)
 
