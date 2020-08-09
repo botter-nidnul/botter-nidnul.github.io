@@ -10,7 +10,7 @@ If on a LAN you may need to forward port 80 to and from your router and device r
 
 ### DNS Provider
 
-I use https://freedns.afraid.org/ because they provide real Type A DNS Records, and they have a domain I like (you'll see). Not all free DNS services will use this method, some do forwarding with nginx or other shenanigans. We want Let's Encrypt to work, so we want something simple and direct like an A Record.
+I use [freedns.afraid.org](https://freedns.afraid.org/) because they provide real Type A DNS Records, and they have a domain I like (you'll see). Not all free DNS services will use this method, some do forwarding with nginx or other shenanigans. We want Let's Encrypt to work, so we want something simple and direct like an A Record.
 
 ![Type A Definition](assets/type_a.jpg)
 
