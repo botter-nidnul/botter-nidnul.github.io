@@ -9,5 +9,3 @@
 ## [Buying Guide to Pi Alternatives](Buying_Guide.md)
 
 ## [Simple HTTPS on a custom domain](Simple_HTTPS.md)
-
-A mirror of this notebook is available on Urbit inside the group `~botter-nidnul/urbit-on-arm`

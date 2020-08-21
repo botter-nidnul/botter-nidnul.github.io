@@ -60,6 +60,6 @@ If your Pi doesn't have enough ram to run urbit, [create a swap file](https://ra
 
 ### The Group
 
-Join the group `~botter-nidnul/urbit-on-arm` if you have questions or issues.
+Join the group `~dasfeb/smol-computers` if you have questions or issues.
 
 ↰ [Return to Index](index.md)
