@@ -9,3 +9,6 @@
 ## [Buying Guide to Pi Alternatives](Buying_Guide.md)
 
 ## [Simple HTTPS on a custom domain](Simple_HTTPS.md)
+
+## [Urbit AArch64 APT Repository](Urbit_AArch64_APT_Repository.md)
+
