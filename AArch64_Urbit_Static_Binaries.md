@@ -2,6 +2,8 @@
 
 # AArch64 Urbit Static Binaries
 
+These binaries have been placed into an [APT repository](Urbit_AArch64_APT_Repository.md) for easy installation and upgrades on debian derived linux distributions.
+
 Available from [my Urbit github fork](https://github.com/botter-nidnul/urbit/releases/tag/urbit-v0.10.8-aarch64).
 
 If you use these on Raspbian you will still have to follow *Step One: Kernel* from [Steps to Urbit on Raspberry Pi](Steps_to_Urbit_on_Raspberry_Pi.md) but the rest of that guide can be ignored.
