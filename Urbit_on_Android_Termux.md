@@ -1,3 +1,8 @@
+---
+title: Urbit on Android (Termux)
+description: A guide to (hopefully) getting Urbit running on your Android device 
+---
+
 ↰ [Return to Index](index.md)
 
 ### A guide to (hopefully) getting Urbit running on your Android device.

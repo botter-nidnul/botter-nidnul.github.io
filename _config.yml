@@ -1,3 +1,11 @@
 theme: jekyll-theme-cayman
-tite: Urbit on ARM
+title: Urbit on ARM
 description: Guide to running Urbit on the Raspberry Pi and other ARM powered devices
+twitter:
+  username: botter_nidnul
+  card: summary
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/logo.jpg

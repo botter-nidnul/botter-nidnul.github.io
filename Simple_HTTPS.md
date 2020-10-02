@@ -1,3 +1,8 @@
+---
+title: Simple HTTPS
+description: Simple HTTPS on a custom domain, the Urbit way
+---
+
 ↰ [Return to Index](index.md)
 
 # Simple HTTPS on a custom domain, the Urbit way

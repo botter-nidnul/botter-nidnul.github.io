@@ -1,3 +1,8 @@
+---
+title: Buying Guide for Raspberry Pi Alternatives
+description: What to look for in a Single-board Computer for running Urbit
+---
+
 ↰ [Return to Index](index.md)
 
 ### What to look for in a Single-board Computer for running Urbit
