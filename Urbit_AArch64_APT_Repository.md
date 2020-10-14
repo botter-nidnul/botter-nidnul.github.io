@@ -25,4 +25,14 @@ If you're running a debian derivative, you can install Urbit as a debian package
 
 `sudo apt install urbit`
 
+#### If you get an error on a 32-bit distro
+
+If you see the error `repository 'http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster InRelease' doesn't support architecture 'armhf'` try enabling multiarch for arm64.
+
+`sudo dpkg --add-architecture arm64`
+
+run `sudo apt update` again
+
+and then `sudo apt-get install urbit:arm64`
+
 ↰ [Return to Index](index.md)
