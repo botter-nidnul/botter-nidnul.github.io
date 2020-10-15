@@ -7,16 +7,14 @@ description: What to look for in a Single-board Computer for running Urbit
 
 ### What to look for in a Single-board Computer for running Urbit
 
-Thinking about buying a Raspberry Pi 4 just to run Urbit on it? I suggest you **don't** - you can **_do better than a Raspberry Pi!_** They're the most popular brand, and have the widest number of compatible accessories, but CPU and storage are both slower on the Raspberry Pi than on alternatives with the same or slightly higher price.
+Thinking about buying a Raspberry Pi just to run Urbit on it? I suggest you **don't** - you can **_do better than a Raspberry Pi!_** They're the most popular brand, and have the widest number of compatible accessories, but CPU and storage are both slower on the Raspberry Pi than on alternatives with the same or slightly higher price.
 
-(Note: It's possible to overclock the RPi4 and run everything except the /boot partition from a SSD over USB, but this guide is from the stock perspective, with out-of-box experience in mind.)
+The Pi4 is powered by a BCM2711 with four Cortex-A72 cores running @ 1.5GHz. When looking for more performant chips search for something with at least two cores of Cortex-A72 design or better (eg Cortex-A73, Cortex-A75, etc) and with a higher frequency than 1.5GHz. Currently, the more powerful mainstream Pi alternatives are powered by the Rockchip RK3399, Amlogic S922X, or Amlogic A311D.
 
-The Pi4 is powered by a BCM2711 with four Cortex-A72 cores running @ 1.5GHz. When looking for more performant chips search for something with at least two cores of Cortex-A72 design or better (eg Cortex-A73, Cortex-A75, etc) and with a higher frequency than 1.5GHz. Currently, the more powerful mainstream Pi alternatives are powered by the Rockchip RK3399, Amlogic S922X, or Amlogic A311D. (There are yet more powerful setups like the HiKey 960, but at that price they're competing with x86-64 SBCs, and I don't see the advantage)
-
-Also be on the lookout for eMMC module or m.2 NVMe support. The RPi4 is primarily limited by its slow CPU, but the MicroSD card it must boot from can also reduce the speed of Urbit. Everything will be slightly snappier with better disk read/write performance. 
+The Pi4 has very limited options for storage: either microsd cards that can be slow or prone to corruption, or through USB adapters that might have buggy chipsets or may not support [UASP](https://en.wikipedia.org/wiki/USB_Attached_SCSI). So be on the lookout for Pi alternatives with an eMMC module, an m.2 NVMe socket, or the ability to add on PCIe devices through a hat or riser.
 
 A good place to start looking for RPi alternatives is [HackerBoards](https://hackerboards.com/).
 
-If I were to recommend a particular Pi alternative (which I'm not, because I haven't tried *_any_* of them) it would probably be the newest SBC from  [Pine64](https://www.pine64.org/). They will soon be releasing the [HardROCK64](https://hackerboards.com/boards/hardrock64/) which should be the same price as the RPi4 and all around more performant, with socket for [eMMC modules](https://store.pine64.org/?product=32gb-emmc).
+At this point in time I'm a fan of the RK3399 powered [NanoPi M4V2](https://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=268) which has a nice [passive heatsink option](https://www.friendlyarm.com/index.php?route=product/product&product_id=235), or a [metal case with fan and NVMe adapter](https://www.friendlyarm.com/index.php?route=product/product&path=89&product_id=267). For an option that looks less like a traditional Pi but has a more powerful CPU, consider an [ODroid N2+](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram-2/).
 
 ↰ [Return to Index](index.md)
