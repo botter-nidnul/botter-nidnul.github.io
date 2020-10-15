@@ -15,6 +15,6 @@ The Pi4 has very limited options for storage: either microsd cards that can be s
 
 A good place to start looking for RPi alternatives is [HackerBoards](https://hackerboards.com/).
 
-At this point in time I'm a fan of the RK3399 powered [NanoPi M4V2](https://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=268) which has a nice [passive heatsink option](https://www.friendlyarm.com/index.php?route=product/product&product_id=235), or a [metal case with fan and NVMe adapter](https://www.friendlyarm.com/index.php?route=product/product&path=89&product_id=267). For an option that looks less like a traditional Pi but has a more powerful CPU, consider an [ODroid N2+](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram-2/).
+At this point in time I'm a fan of the RK3399 powered [NanoPi M4V2](https://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=268) which has a nice [passive heatsink option](https://www.friendlyarm.com/index.php?route=product/product&product_id=235), or a [metal case with fan and NVMe adapter](https://www.friendlyarm.com/index.php?route=product/product&path=89&product_id=267). (Note that you won't be able to boot from an NVMe drive on the NanoPi M4V2, you'll still need at least a boot partition on an eMMC module or SD card.) For an option that looks less like a traditional Pi but has a more powerful CPU, consider an [ODroid N2+](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram-2/).
 
 ↰ [Return to Index](index.md)
