@@ -11,7 +11,7 @@ You need a Raspberry Pi capable of running in AArch64 (aka 64-bit) mode, which m
 
 Be aware that running Urbit on a microSD card may, depending on the speed of your card and the speed of the reader in your Raspberry Pi, be a slow and frustrating experience. This is especially true on RPi models before the Raspberry Pi 4, which will need to have the [reader interface overclocked](https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3) in order to run Urbit at an acceptable speed.
 
-It's better to avoid the microSD card and just run your Pi from a USB attached SSD.
+It's better to avoid the microSD card and just run your Pi from a USB attached SSD (get an adapter that supports [UASP](https://www.jeffgeerling.com/blog/2020/uasp-makes-raspberry-pi-4-disk-io-50-faster)).
 
 It's best to avoid buying a Raspberry Pi entirely, and to instead [purchase an alternative single-board computer](Buying_Guide.md) with sane storage options built into the board.
 
@@ -29,7 +29,7 @@ You can do this by running `echo 'arm_64bit=1' | sudo tee -a /boot/config.txt`
 
 Now reboot and your Pi will be running a 64-bit kernel.
 
-### Alternate Step Two: Download Static Binaries
+## Alternate Step Two: Download Static Binaries
 
 It's now possible to download already compiled static binaries for AArch64. See [this post](AArch64_Urbit_Static_Binaries.md) for further details. If you take this route, the following steps are unnecessary.
 
