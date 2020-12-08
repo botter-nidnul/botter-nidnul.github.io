@@ -19,4 +19,5 @@ tar xzf urbit-v1.0-a169a.tar.gz
 ./urbit-v1.0-aarch64-linux/urbit sampel-palnet
 ```
 
+
 ↰ [Return to Index](index.md)
