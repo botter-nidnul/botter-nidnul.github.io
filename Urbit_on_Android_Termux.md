@@ -11,7 +11,7 @@ Running Urbit on Android requires Termux, and using PRoot to get around Android 
 
 Your Android device will need to have at least a linux kernel version of 3.17 because of [libent](https://github.com/urbit/libent).
 
-These Termux Urbit binaries have been modified to run on Android by altering the [LMDB build flags](https://github.com/botter-nidnul/urbit/commit/58ab2fbef177d8de9da10f8f8e407c6e3bc45295).
+These Termux Urbit binaries have been modified to run on Android by altering the [LMDB build flags](https://github.com/botter-nidnul/urbit/commit/f5fd8cec3a71fec42e9584e943f2e00dde83d646).
 
 ### Step One: Install Termux
 
@@ -35,8 +35,8 @@ Install the necessary packages:
 ### Step Four: Get Binaries
 
 ```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-proot-v0.10.7/termux-proot-urbit-v0.10.7-linux-arm64.tgz
-tar xzf termux-proot-urbit-v0.10.7-linux-arm64.tgz
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v1.0-android/urbit-v1.0-f5fd8.tar.gz
+tar xzf urbit-v1.0-f5fd8.tar.gz
 ```
 
 ### Step Five: Run Urbit
@@ -45,8 +45,7 @@ You need to run `termux-chroot` to switch into a PRoot'ed environment, then you 
 
 ```
 termux-chroot
-cd 19d5355786f48fc9899ac97d3319a5850ef9e5f8-linux-arm64
-./urbit
+./urbit-v1.0-aarch64-linux/urbit sampel-palnet
 ```
 
 ### Step Six: Feedback
