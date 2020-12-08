@@ -12,3 +12,5 @@
 
 ## [Urbit AArch64 APT Repository](Urbit_AArch64_APT_Repository.md)
 
+## [ARM versions of flagday.sh](flagday.md)
+
