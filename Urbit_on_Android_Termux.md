@@ -1,25 +1,17 @@
 ---
 title: Urbit on Android (Termux)
-description: A guide to (hopefully) getting Urbit running on your Android device 
+description: A guide to getting Urbit running on your Android device 
 ---
 
 ↰ [Return to Index](index.md)
 
-### A guide to (hopefully) getting Urbit running on your Android device.
+### A guide to getting Urbit running on your Android device.
 
-There are two ways to run Urbit on Android: Inside of PRoot and outside of PRoot.
+Running Urbit on Android requires Termux, and using PRoot to get around Android security "features".
 
-The PRoot method will (with a little luck) allow you to run Urbit on a stock Android device, although at a slight speed penalty.
+Your Android device will need to have at least a linux kernel version of 3.17 because of [libent](https://github.com/urbit/libent).
 
-If you're running a custom kernel or custom ROM on your device it's likely [seccomp](https://en.wikipedia.org/wiki/Seccomp) has been disabled and you can run Urbit outside of PRoot. (To check the status of seccomp run `grep Seccomp /proc/self/status` in Termux. If seccomp is disabled this command will return either 0 or a blank line)
-
-(It's also possible to get around seccomp on a rooted device running a stock kernel by launching Urbit as root. It's probably best not to do this, except *maybe* for a fake ~zod development ship. If you want to know how to run commands as root inside Termux you can look it up yourself.)
-
-In my experience not using PRoot speeds up Urbit by about 7%, but with the poor single threaded performance of ARM chips you may find that actually makes a difference to your Urbit experience.
-
-Both sets of these Termux Urbit binaries have been modified to run better on Android by altering the [LMDB build flags](https://github.com/botter-nidnul/urbit/commit/58ab2fbef177d8de9da10f8f8e407c6e3bc45295). The non-PRoot binaries have been further altered to know [where to find the tmp directory and resolv.conf file](https://github.com/botter-nidnul/urbit/commit/8ff6bc672d3975bb9ab1b1c2ec785d8273f81b75) inside the normal Termux environment.
-
-Your Android device will need to have at least a linux kernel version of 3.17 because of [libent](https://github.com/urbit/libent). Android versions earlier than 8 (Oreo) do not have seccomp but may not have a kernel version high enough to run Urbit.
+These Termux Urbit binaries have been modified to run on Android by altering the [LMDB build flags](https://github.com/botter-nidnul/urbit/commit/58ab2fbef177d8de9da10f8f8e407c6e3bc45295).
 
 ### Step One: Install Termux
 
@@ -36,40 +28,20 @@ Your particular ROM may have an aggressive process killer that will murder Termu
 
 ### Step Three: Install Pkgs
 
-Install some necessary packages:
+Install the necessary packages:
 
-`pkg install resolv-conf`
-
-and if you're going to use PRoot:
-
-`pkg install proot`
+`pkg install resolv-conf proot`
 
 ### Step Four: Get Binaries
-
-If you're going to use PRoot:
 
 ```
 curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-proot-v0.10.7/termux-proot-urbit-v0.10.7-linux-arm64.tgz
 tar xzf termux-proot-urbit-v0.10.7-linux-arm64.tgz
 ```
 
-If you're **not** going to use PRoot:
-
-```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/termux-v0.10.7/termux-urbit-v0.10.7-linux-arm64.tgz
-tar xzf termux-urbit-v0.10.7-linux-arm64.tgz
-```
-
 ### Step Five: Run Urbit
 
-If you're **not** using PRoot, you can start Urbit just like you would in normal linux:
-
-```
-cd 17b5583c1e8e7e5c4bababa04c3a3d4bdd8127bb-linux-arm64
-./urbit
-```
-
-If you're using PRoot you need to run one extra command, `termux-chroot`, to switch into a PRoot'ed environment:
+You need to run `termux-chroot` to switch into a PRoot'ed environment, then you can start Urbit just like you would in normal linux:
 
 ```
 termux-chroot
