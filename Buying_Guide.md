@@ -11,7 +11,7 @@ Thinking about buying a Raspberry Pi just to run Urbit on it? I suggest you **do
 
 The Pi4 is powered by a BCM2711 with four Cortex-A72 cores running @ 1.5GHz. When looking for more performant chips search for something with at least two cores of Cortex-A72 design or better (eg Cortex-A73, Cortex-A75, etc) and with a higher frequency than 1.5GHz. Currently, the more powerful mainstream Pi alternatives are powered by the Rockchip RK3399, Amlogic S922X, or Amlogic A311D.
 
-The Pi4 has very limited options for storage: either microSD cards that are limited by the speed of the Pi's reader even if the card is of high quality, or through USB adapters that might have buggy chipsets or may not support [UASP](https://en.wikipedia.org/wiki/USB_Attached_SCSI). So be on the lookout for Pi alternatives with an eMMC module, an m.2 NVMe socket, or the ability to add on PCIe devices through a hat or riser.
+The Pi4 has very limited options for storage: either microSD cards that might be more prone to corruption and are restricted to the speed of the Pi's reader even if the card is of high quality, or through USB adapters that might have buggy chipsets or may not support [UASP](https://en.wikipedia.org/wiki/USB_Attached_SCSI). So be on the lookout for Pi alternatives with an eMMC module, an m.2 NVMe socket, or the ability to add on PCIe devices through a hat or riser.
 
 A good place to start looking for RPi alternatives is [HackerBoards](https://hackerboards.com/).
 
