@@ -14,3 +14,4 @@
 
 ## [ARM versions of flagday.sh](flagday.md)
 
+## [Public Service Announcement on USB attached SSDs](usb_adapters.md)
