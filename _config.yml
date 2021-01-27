@@ -9,3 +9,5 @@ defaults:
       path: ""
     values:
       image: /assets/logo.jpg
+gems:
+  - jekyll-redirect-from
