@@ -78,15 +78,19 @@ Raspberry Pi OS doesn't set `fstrim` to run automatically, which can be a proble
 First, test if your storage device supports running fstrim.
 
 run `sudo fstrim -v /` and it should produce results similar to:
+
 `/: 13.1 GiB (14027571200 bytes) trimmed`
 
 If it instead says:
+
 `/: the discard operation is not supported`
+
 then you may have an SD card that doesn't accept TRIM commands or issues with your USB SSD adapter, [which is a whole](https://www.glump.net/howto/desktop/enable-trim-on-an-external-ssd-on-linux) [complicated thing](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi) beyond the scope of this guide (and why I recommend avoiding the Raspberry Pi and buying a device with sane storage options built into the board.)
 
 If `sudo fstrim -v /` produced successful results then change the timer to run more often and enable it:
 
 `sudo sed -i 's/weekly/daily/' /lib/systemd/system/fstrim.timer`
+
 `sudo systemctl enable fstrim.timer`
 
 ### The Group
