@@ -7,11 +7,11 @@ description: Guide for running (and optionally building) Urbit on the Raspberry 
 
 # Steps to Urbit on Raspberry Pi
 
-You need a Raspberry Pi capable of running in AArch64 (aka 64-bit) mode, which means a RPi 3 or 4 (maybe a later model RPi 2 with the upgraded BCM2837 chip).
+You need a Raspberry Pi capable of running in AArch64 (aka 64-bit) mode, which means a RPi 3 or 4 (maybe a later model RPi 2 with the upgraded BCM2837 chip). The CPUs of earlier models will struggle with providing a smooth interactive experience, and the RPi3 and RPi2 are probably better suited to [moon tasks](https://urbit.org/docs/glossary/moon/) that don't need much responsiveness.
 
-Be aware that running Urbit on a microSD card may, depending on the speed of your card and the speed of the reader in your Raspberry Pi, be a slow and frustrating experience. This is especially true on RPi models before the Raspberry Pi 4, which may benefit from having the [reader interface overclocked](https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3) in order to run Urbit at an increased speed.
+Be aware that running Urbit on a microSD card may contribute to a slower Urbit experience, depending on the speed of your card and the speed of the reader in your Raspberry Pi, and if you're running anything else on the device that will compete with Urbit for disk access. On models earlier than the Raspberry Pi 4 there may be benefit to [overclocking the reader interface](https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3) to increase the speed the microSD card can be written to.
 
-It's better to avoid the microSD card and just run your Pi from a USB attached SSD (get an adapter that supports [UASP](https://www.jeffgeerling.com/blog/2020/uasp-makes-raspberry-pi-4-disk-io-50-faster)).
+It's better to avoid the microSD card and just run your Pi from a USB3 attached SSD (get an adapter that supports [UASP](https://www.jeffgeerling.com/blog/2020/uasp-makes-raspberry-pi-4-disk-io-50-faster)).
 
 It's best to avoid buying a Raspberry Pi entirely, and to instead [purchase an alternative single-board computer](Buying_Guide.md) with sane storage options built into the board.
 
