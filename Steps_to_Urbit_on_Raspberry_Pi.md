@@ -31,11 +31,11 @@ Now reboot and your Pi will be running a 64-bit kernel.
 
 ## Alternate Step Two: Download Static Binaries
 
-It's now possible to download already compiled static binaries for AArch64. See [this post](AArch64_Urbit_Static_Binaries.md) for further details. If you take this route, except for [Step Seven](#step-seven-configure-trim-timer), the following steps are unnecessary.
+It's now possible to download already compiled static binaries for AArch64. See [this post](AArch64_Urbit_Static_Binaries.md) for further details. If you take this route, you still should follow [Step Seven: Configure TRIM timer](#step-seven-configure-trim-timer), but the other following steps are unnecessary.
 
 ### Step Two: Nix
 
-Keep in mind, this step isn't necessary unless you want to build Urbit from source. Make sure you didn't skip over reading the above section [Alternate Step Two: Download Static Binaries](#alternate-step-two-download-static-binaries).
+Keep in mind, this step isn't necessary unless you want to build Urbit from source. Make sure you didn't skip over reading the [above section](#alternate-step-two-download-static-binaries).
 
 `curl -L https://nixos.org/nix/install | sh`
 
