@@ -45,7 +45,7 @@ Then restart your shell session or run `. /home/pi/.nix-profile/etc/profile.d/ni
 
 `sudo apt-get install git-lfs`
 
-`git clone https://github.com/botter-nidnul/urbit --branch urbit-v1.1-aarch64`
+`git clone https://github.com/botter-nidnul/urbit --branch urbit-v1.2-aarch64`
 
 `cd urbit`
 

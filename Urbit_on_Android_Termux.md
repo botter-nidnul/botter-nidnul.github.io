@@ -35,8 +35,8 @@ Install the necessary packages:
 ### Step Four: Get Binaries
 
 ```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v1.1-android/urbit-v1.1-8fe85.tar.gz
-tar xzf urbit-v1.1-8fe85.tar.gz
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v1.2-android/urbit-v1.2-4d48b.tar.gz
+tar xzf urbit-v1.2-4d48b.tar.gz
 ```
 
 ### Step Five: Run Urbit
@@ -45,7 +45,7 @@ You need to run `termux-chroot` to switch into a PRoot'ed environment, then you 
 
 ```
 termux-chroot
-./urbit-v1.1-aarch64-linux/urbit sampel-palnet
+./urbit-v1.2-aarch64-linux/urbit sampel-palnet
 ```
 
 ### Step Six: Feedback
