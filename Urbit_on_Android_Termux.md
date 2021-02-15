@@ -48,6 +48,10 @@ termux-chroot
 ./urbit-v1.2-aarch64-linux/urbit sampel-palnet
 ```
 
+### Step Five & 1/2: Help urbit-king find certificates
+
+Termux doesn't have certificate information stored where `urbit-king` expects to find it, so if you want to use `urbit-king` first run `termux-chroot` and then `ln -s /etc/tls /etc/ssl`
+
 ### Step Six: Feedback
 
 It'd be helpful if you give feedback on where this does or doesn't work in the group on Urbit `~dasfeb/smol-computers`
