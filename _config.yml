@@ -1,6 +1,7 @@
 theme: jekyll-theme-cayman
 title: Urbit on ARM
 description: Guide to running Urbit on (non-Apple) ARM powered devices
+show_buttons: "true"
 twitter:
   username: botter_nidnul
   card: summary
