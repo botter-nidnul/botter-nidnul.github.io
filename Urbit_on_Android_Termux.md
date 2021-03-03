@@ -26,18 +26,15 @@ You'll also want to make sure battery optimization (or whatever your particular 
 
 Your particular ROM may have an aggressive process killer that will murder Termux if it runs too intensively for too long. I've personally suffered from OnePlus's BgDetect, which I prevent from doing its dirty work by opening the recent apps switcher, clicking on the three dots in the upper right hand corner of the Termux screenshot and clicking "🔒Lock".
 
-### Step Three: Install Pkgs
+### Step Three: Add APT Repo
 
-Install the necessary packages:
+Add my urbit-android repo to your Termux:
 
-`pkg install resolv-conf proot`
+`curl -L https://botter-nidnul.github.io/urbit-android.deb/setup-urbit-repo.sh | sh`
 
-### Step Four: Get Binaries
+### Step Four: Install Urbit
 
-```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v1.2-android/urbit-v1.2-4d48b.tar.gz
-tar xzf urbit-v1.2-4d48b.tar.gz
-```
+`pkg install urbit`
 
 ### Step Five: Run Urbit
 
@@ -45,7 +42,7 @@ You need to run `termux-chroot` to switch into a PRoot'ed environment, then you 
 
 ```
 termux-chroot
-./urbit-v1.2-aarch64-linux/urbit sampel-palnet
+urbit sampel-palnet
 ```
 
 ### Step Five & 1/2: Help urbit-king find certificates
