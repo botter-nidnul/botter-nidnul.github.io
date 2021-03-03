@@ -29,7 +29,7 @@ In case this linewraps on your screen, this is supposed to all be on one line:
 
 #### If you get an error on a 32-bit distro
 
-If you see the error `repository 'http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster InRelease' doesn't support architecture 'armhf'` try enabling multiarch for arm64.
+If you see the message `repository 'http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster InRelease' doesn't support architecture 'armhf'` try enabling multiarch for arm64.
 
 `sudo dpkg --add-architecture arm64`
 
