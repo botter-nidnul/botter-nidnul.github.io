@@ -35,7 +35,9 @@ Now reboot and your Pi will be running a 64-bit kernel.
 
 ### Step Three: Add the repository to your apt sources
 
-```echo 'deb http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' | sudo tee /etc/apt/sources.list.d/urbit-on-arm.list```
+In case this linewraps on your screen, this is supposed to all be on one line:
+
+`echo 'deb http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' | sudo tee /etc/apt/sources.list.d/urbit-on-arm.list`
 
 ### Step Four: Enable multiarch for arm64
 
