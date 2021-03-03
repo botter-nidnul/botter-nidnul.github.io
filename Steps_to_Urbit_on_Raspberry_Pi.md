@@ -29,45 +29,46 @@ You can do this by running `echo 'arm_64bit=1' | sudo tee -a /boot/config.txt`
 
 Now reboot and your Pi will be running a 64-bit kernel.
 
-## Alternate Step Two: Download Static Binaries
+### Step Two: Import the repository signing key
 
-It's now possible to download already compiled static binaries for AArch64. See [this post](AArch64_Urbit_Static_Binaries.md) for further details. If you take this route, you still should follow [Step Seven: Configure TRIM timer](#step-seven-configure-trim-timer), but the other following steps are unnecessary.
+`curl https://s3.us-east-2.amazonaws.com/urbit-on-arm/urbit-on-arm_public.gpg | sudo apt-key add -`
 
-### Step Two: Nix
+### Step Three: Add the repository to your apt sources
 
-Keep in mind, this step isn't necessary unless you want to build Urbit from source. Make sure you didn't skip over reading the [above section](#alternate-step-two-download-static-binaries).
+`echo 'deb http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' | sudo tee /etc/apt/sources.list.d/urbit-on-arm.list`
 
-`curl -L https://nixos.org/nix/install | sh`
+### Step Four: Enable multiarch for arm64
 
-Then restart your shell session or run `. /home/pi/.nix-profile/etc/profile.d/nix.sh` so your environment variables are set for nix.
+`sudo dpkg --add-architecture arm64`
 
-### Step Three: Git
+### Step Five: Update the package list
 
-`sudo apt-get install git-lfs`
+`sudo apt update`
 
-`git clone https://github.com/botter-nidnul/urbit --branch urbit-v1.2-aarch64`
+Messages like the below are expected and harmless:
 
-`cd urbit`
+```
+N: Skipping acquire of configured file 'custom/binary-armhf/Packages' as repository 'http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster InRelease' doesn't support architecture 'armhf'
+N: Skipping acquire of configured file 'main/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
+N: Skipping acquire of configured file 'contrib/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
+N: Skipping acquire of configured file 'non-free/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
+N: Skipping acquire of configured file 'rpi/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
 
-### Step Four: Make
+```
 
-`make build && make install`
+### Step Five: Actually install Urbit
 
-This step will take a while as nix needs to download and build urbit's dependencies.
-
-### Step Five: Confirm Urbit Install
-
-If step four completed successfully, `which urbit` should return `/home/pi/.nix-profile/bin/urbit`.
-
-You no longer need the urbit directory git cloned, and I suggest you remove it to avoid confusion.
-
-`cd`
-
-`rm -rf urbit`
+`sudo apt install urbit`
 
 ### Step Six: Boot Your Planet
 
-Run urbit with `urbit some-planet` (note there's no `./` in front of the urbit command like when you use downloaded release binaries)
+Run urbit with `urbit some-planet` (note there's no `./` in front of the urbit command like when you use the usual binaries from `linux64.tgz`).
+
+So booting a comet would be `urbit -c mycomet` and running that comet would be `urbit mycomet`, and booting a planet would be `urbit -w sampel-palnet -k ./my-planet.key`.
+
+So you can follow the [install guide from urbit.org](https://urbit.org/using/install/) but don't put what it tells you to in front of the `urbit` part of the command.
+
+There's also no need to run `sudo setcap 'cap_net_bind_service=+ep'` to allow urbit to bind to port 80, it's already been done for you as part of the package install process.
 
 If your Pi doesn't have enough ram to run urbit, [create a swap file](https://raspberrypi.stackexchange.com/a/1605).
 
