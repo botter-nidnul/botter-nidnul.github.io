@@ -17,7 +17,9 @@ If you're running a debian derivative, you can install Urbit as a debian package
 
 In case this linewraps on your screen, this is supposed to all be on one line:
 
-`echo 'deb http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' | sudo tee /etc/apt/sources.list.d/urbit-on-arm.list`
+```
+echo 'deb http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' | sudo tee /etc/apt/sources.list.d/urbit-on-arm.list
+```
 
 #### Update the package list
 
