@@ -35,7 +35,7 @@ Now reboot and your Pi will be running a 64-bit kernel.
 curl https://s3.us-east-2.amazonaws.com/urbit-on-arm/urbit-on-arm_public.gpg | sudo apt-key add -
 ```
 
-### Step Three: Alter apt sources
+### Step Three: Apt sources
 
 Add my `Urbit on ARM` repository to your apt sources:
 
