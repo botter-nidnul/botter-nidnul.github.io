@@ -29,17 +29,23 @@ You can do this by running `echo 'arm_64bit=1' | sudo tee -a /boot/config.txt`
 
 Now reboot and your Pi will be running a 64-bit kernel.
 
-### Step Two: Import the repository signing key
+### Step Two: Import repository signing key
 
 ```
 curl https://s3.us-east-2.amazonaws.com/urbit-on-arm/urbit-on-arm_public.gpg | sudo apt-key add -
 ```
 
-### Step Three: Add the repository to your apt sources
+### Step Three: Alter apt sources
+
+Add my `Urbit on ARM` repository to your apt sources:
 
 ```
-echo 'deb http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' | sudo tee /etc/apt/sources.list.d/urbit-on-arm.list
+echo 'deb [ arch=arm64 ] http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' | sudo tee /etc/apt/sources.list.d/urbit-on-arm.list
 ```
+
+Also modify your existing `sources.list` so it doesn't cause apt to produce errors as it goes looking for an architecture that doesn't exist in the Raspberry Pi OS repository:
+
+`sudo sed -zi 's/deb/deb [ arch=armhf ]/' /etc/apt/sources.list`
 
 ### Step Four: Enable multiarch for arm64
 
@@ -49,22 +55,11 @@ echo 'deb http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster custom' 
 
 `sudo apt update`
 
-Messages like the below are expected and harmless:
-
-```
-N: Skipping acquire of configured file 'custom/binary-armhf/Packages' as repository 'http://urbit-on-arm.s3-website.us-east-2.amazonaws.com buster InRelease' doesn't support architecture 'armhf'
-N: Skipping acquire of configured file 'main/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
-N: Skipping acquire of configured file 'contrib/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
-N: Skipping acquire of configured file 'non-free/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
-N: Skipping acquire of configured file 'rpi/binary-arm64/Packages' as repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' doesn't support architecture 'arm64'
-
-```
-
-### Step Five: Actually install Urbit
+### Step Six: Actually install Urbit
 
 `sudo apt install urbit`
 
-### Step Six: Boot Your Planet
+### Step Seven: Boot Your Planet
 
 Run urbit with `urbit some-planet` (note there's no `./` in front of the urbit command like when you use the usual binaries from `linux64.tgz`).
 
@@ -76,7 +71,7 @@ There's also no need to run `sudo setcap 'cap_net_bind_service=+ep'` to allow ur
 
 If your Pi doesn't have enough ram to run urbit, [create a swap file](https://raspberrypi.stackexchange.com/a/1605).
 
-### Step Seven: Configure TRIM timer
+### Step Eight: Configure TRIM timer
 
 Raspberry Pi OS doesn't set `fstrim` to run automatically, which can be a problem when combined with the way Urbit creates checkpoints; we need to discard the unused blocks from deleted checkpoint patches.
 
