@@ -87,11 +87,9 @@ If it instead says:
 
 then you may have an SD card that doesn't accept TRIM commands or issues with your USB SSD adapter, [which is a whole](https://www.glump.net/howto/desktop/enable-trim-on-an-external-ssd-on-linux) [complicated thing](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi) beyond the scope of this guide (and why I recommend avoiding the Raspberry Pi and buying a device with sane storage options built into the board.)
 
-If `sudo fstrim -v /` produced successful results then change the timer to run more often and enable it:
+If `sudo fstrim -v /` produced successful results then install a modified fstrim service package, which will attempt to TRIM all mounted filesystems daily:
 
-`sudo sed -i 's/weekly/daily/' /lib/systemd/system/fstrim.timer`
-
-`sudo systemctl enable fstrim.timer`
+`sudo apt install fstrim-urbit`
 
 ### The Group
 
