@@ -13,9 +13,9 @@ Running Urbit on Android should be considered an experimental platform; a fun pl
 
 I wouldn’t run it continuously for long stretches because Urbit writes more heavily to disk than it needs to right now, and a phone/tablet isn’t going to have enough spare disk capacity to absorb that wear. Also, Urbit doesn’t know how to put itself to sleep to conserve power, so it's going to affect your battery life.
 
-What special things might you be able to do with Urbit on Android? There are some interesting addons for Termux (and they’re free if you install from F-Droid instead of the Google Play Store). So you could rig something up to have your Urbit send text messages, or collect information from your phone’s sensors. https://wiki.termux.com/wiki/Addons
+What special things might you be able to do with Urbit on Android? There are [some interesting addons for Termux](https://wiki.termux.com/wiki/Addons) (and they’re free if you install from F-Droid instead of the Google Play Store). So you could rig something up to have your Urbit send text messages, or collect information from your phone’s sensors.
 
-There’s also Termux:Widget, which could make Urbit launch with the press of a button instead of having to type in the shell on your tiny keyboard.
+There’s also [Termux:Widget](https://wiki.termux.com/wiki/Termux:Widget), which could make Urbit launch with the press of a button instead of having to type in the shell on your tiny keyboard.
 
 ### Technical details
 
