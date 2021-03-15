@@ -5,7 +5,19 @@ description: A guide to getting Urbit running on your Android device
 
 ↰ [Return to Index](index.md)
 
-### A guide to getting Urbit running on your Android device.
+## A guide to getting Urbit running on your Android device.
+
+### Why?
+
+Running Urbit on Android should be considered an experimental platform; a fun place for trying things out with a moon, rather than the best place to host your planet from.
+
+I wouldn’t run it continuously for long stretches because Urbit writes more heavily to disk than it needs to right now, and a phone/tablet isn’t going to have enough spare disk capacity to absorb that wear. Also, Urbit doesn’t know how to put itself to sleep to conserve power, so it's going to affect your battery life.
+
+What special things might you be able to do with Urbit on Android? There are some interesting addons for Termux (and they’re free if you install from F-Droid instead of the Google Play Store). So you could rig something up to have your Urbit send text messages, or collect information from your phone’s sensors. https://wiki.termux.com/wiki/Addons
+
+There’s also Termux:Widget, which could make Urbit launch with the press of a button instead of having to type in the shell on your tiny keyboard.
+
+### Technical details
 
 Running Urbit on Android requires Termux, and using PRoot to get around Android security "features".
 
