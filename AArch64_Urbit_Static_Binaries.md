@@ -9,6 +9,8 @@ description: Already compiled static binaries for Urbit on AArch64
 
 These binaries have been placed into an [APT repository](Urbit_AArch64_APT_Repository.md) for easy installation and upgrades on debian derived linux distributions.
 
+The latest version is always pointed to from https://botter-nidnul.github.io/latest_redirect.html
+
 Available from [my Urbit github fork](https://github.com/botter-nidnul/urbit/releases/tag/urbit-v1.2-aarch64).
 
 ```
