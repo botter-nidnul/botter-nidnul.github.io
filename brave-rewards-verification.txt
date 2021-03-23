@@ -1,3 +1,7 @@
+---
+layout: none
+permalink: .well-known/brave-payments-verification.txt
+---
 This is a Brave Rewards publisher verification file.
 
 Domain: botter-nidnul.github.io
