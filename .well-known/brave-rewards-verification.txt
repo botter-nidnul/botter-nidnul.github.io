@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: botter-nidnul.github.io
+Token: 25bb6f5fdb91f86bae7a3867b737b879a1a4a997dfeeca24ef0745d1cf9b7978
