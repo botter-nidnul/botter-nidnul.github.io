@@ -1,6 +1,6 @@
 ---
 layout: none
-permalink: .well-known/brave-payments-verification.txt
+permalink: .well-known/brave-rewards-verification.txt
 ---
 This is a Brave Rewards publisher verification file.
 
