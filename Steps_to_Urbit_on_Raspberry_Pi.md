@@ -1,6 +1,6 @@
 ---
 title: Steps to Urbit on Raspberry Pi
-description: Guide for running (and optionally building) Urbit on the Raspberry Pi
+description: Guide for running Urbit on the Raspberry Pi
 ---
 
 ↰ [Return to Index](index.md)
