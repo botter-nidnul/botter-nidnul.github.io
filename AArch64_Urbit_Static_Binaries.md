@@ -11,12 +11,12 @@ These binaries have been placed into an [APT repository](Urbit_AArch64_APT_Repos
 
 The latest version is always redircted to from [latest_redirect.html](https://botter-nidnul.github.io/latest_redirect.html)
 
-Available from [my Urbit github fork](https://github.com/botter-nidnul/urbit/releases/tag/urbit-v1.3-aarch64).
+Available from [my Urbit github fork](https://github.com/botter-nidnul/urbit/releases/tag/urbit-v1.4-aarch64).
 
 ```
-curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v1.3-aarch64/urbit-v1.3-8b897.tar.gz
-tar xzf urbit-v1.3-8b897.tar.gz
-./urbit-v1.3-aarch64-linux/urbit sampel-palnet
+curl -OL https://github.com/botter-nidnul/urbit/releases/download/urbit-v1.4-aarch64/urbit-v1.4-0e1a3.tar.gz
+tar xzf urbit-v1.4-0e1a3.tar.gz
+./urbit-v1.4-aarch64-linux/urbit sampel-palnet
 ```
 
 ↰ [Return to Index](index.md)
